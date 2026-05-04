@@ -1,0 +1,41 @@
+body { margin: 0; background: #000; color: white; overflow: hidden; font-family: 'Courier New', Courier, monospace; }
+.app-container { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.5s ease; }
+
+/* Mirror Effects */
+/* Force the video to obey the container's scale */
+.effect-fat .webcam-feed  {
+    transform: scaleX(2.0) !important;
+}
+
+.effect-thin .webcam-feed  {
+    transform: scaleX(0.4) !important;
+}
+
+.effect-tall .webcam-feed  {
+    transform: scaleY(2.0) !important;
+}
+
+.effect-short .webcam-feed  {
+    transform: scaleY(0.4) !important;
+}
+
+/* The Webcam component usually renders a wrapper div AND a video element. 
+   We target the 'video' tag inside our class to be safe. */
+.webcam-feed video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-wrapper { position: relative; width: 90vw; height: 80vh; border: 2px solid #333; overflow: hidden; display: flex; justify-content: center; }
+.webcam-feed { width: 100%; height: 100%; object-fit: cover; }
+
+.camera-flash { position: fixed; inset: 0; background: white; z-index: 1000; animation: flashOut 0.3s forwards; }
+@keyframes flashOut { from { opacity: 1; } to { opacity: 0; } }
+
+.frozen-overlay { position: absolute; inset: 0; border: 10px solid #ffd700; background: rgba(255, 215, 0, 0.1); display: flex; align-items: center; justify-content: center; z-index: 50; }
+.frozen-text { font-size: 5rem; color: #ffd700; text-shadow: 0 0 20px #000; }
+
+.accessories-overlay img { position: absolute; pointer-events: none; z-index: 60; }
+
