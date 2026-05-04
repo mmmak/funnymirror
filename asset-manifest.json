@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/funnymirror/static/css/main.af1b2fcd.css",
+    "main.js": "/funnymirror/static/js/main.9ad9d6bf.js",
+    "static/js/453.af205ec6.chunk.js": "/funnymirror/static/js/453.af205ec6.chunk.js",
+    "index.html": "/funnymirror/index.html",
+    "main.af1b2fcd.css.map": "/funnymirror/static/css/main.af1b2fcd.css.map",
+    "main.9ad9d6bf.js.map": "/funnymirror/static/js/main.9ad9d6bf.js.map",
+    "453.af205ec6.chunk.js.map": "/funnymirror/static/js/453.af205ec6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af1b2fcd.css",
+    "static/js/main.9ad9d6bf.js"
+  ]
+}
