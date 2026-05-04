@@ -67,6 +67,12 @@ export default function App() {
       if (transcript.includes('snapshot')) {
         handleSnapshot();
       }
+
+      for (let i = 0; i < EFFECTS.length; i++) {
+        if (transcript.includes(EFFECTS[i])) {
+          setEffectIdx(i);
+        }
+      }
     };
 
     rec.onerror = (event) => {
