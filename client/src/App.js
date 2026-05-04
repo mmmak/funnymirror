@@ -17,8 +17,8 @@ export default function App() {
     const loadModels = async () => {
       try {
         console.log("Loading models...");
-        await faceapi.nets.tinyFaceDetector.loadFromUri('/models');
-        await faceapi.nets.faceLandmark68Net.loadFromUri('/models');
+        await faceapi.nets.tinyFaceDetector.loadFromUri(process.env.PUBLIC_URL + '/models');
+        await faceapi.nets.faceLandmark68Net.loadFromUri(process.env.PUBLIC_URL + '/models');
         console.log("✅ Models Loaded Successfully");
       } catch (err) {
         console.error("❌ Model Load Error:", err);
